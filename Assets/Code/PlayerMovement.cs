@@ -8,15 +8,12 @@ public class PlayerMovement : MonoBehaviour
     public float mouseSensitivity = 2f;
     float cameraVerticalRotation = 0f;
     float cameraHorizontalRotation = 0f;
-    public float speed = 5f;
+    public float HorizontalSpeed = 15f;
+    public float VerticalSpeed = 0.015f;
 
-    public float Stamina, MaxStamina;
-    public float SprintCost;
-    public float SprintCoolDownTimer;
-    
     void Start()
     {
-
+        Player.transform.position = new Vector3(200, 15, 200);
     }
     
     void Update()
@@ -46,61 +43,20 @@ public class PlayerMovement : MonoBehaviour
         // Create a movement vector
         Vector3 direction = new Vector3(horizontalInput, 0, verticalInput).normalized;
 
-        // Adjust player's height based on their state
-        if (Input.GetKey(KeyCode.Space))
+        // Rise and Fall in the air
+        if (Input.GetKey(KeyCode.Q)) //Fly
         {
-            Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + 0.05f, Player.transform.position.z);
-            
-            speed = 5f;
-            Stamina += (0.5f * SprintCost) * Time.deltaTime;
-            //UIManager.SprintMeter.fillAmount = Stamina / MaxStamina;
-            SprintCoolDownTimer -= Time.deltaTime;
 
-            //if (!Footsteps.isPlaying)
-            {
-                //Footsteps.PlayOneShot(Sounds[0]);
-            }
+            Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + VerticalSpeed, Player.transform.position.z);
         }
-        if (Input.GetKey(KeyCode.LeftControl))
+        else if (Input.GetKey(KeyCode.LeftControl)) //Land
         {
-            Player.transform.position = new Vector3(Player.transform.position.x, 2, Player.transform.position.z);
-            
-            speed = 5f;
-            Stamina += (0.5f * SprintCost) * Time.deltaTime;
-            //UIManager.SprintMeter.fillAmount = Stamina / MaxStamina;
-            SprintCoolDownTimer -= Time.deltaTime;
 
-            //if (!Footsteps.isPlaying)
-            {
-                //Footsteps.PlayOneShot(Sounds[0]);
-            }
+            Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y - VerticalSpeed, Player.transform.position.z);
         }
-        else if (Input.GetKey(KeyCode.LeftShift) && Stamina > 0 && SprintCoolDownTimer <= 0)
+        else //Idle
         {
-            Player.transform.position = new Vector3(Player.transform.position.x, 2.5f, Player.transform.position.z);
-
-            speed = 10f;
-            Stamina -= SprintCost * Time.deltaTime;
-            //UIManager.SprintMeter.fillAmount = Stamina / MaxStamina;
-
-            //if (!Footsteps.isPlaying)
-            {
-                //Footsteps.PlayOneShot(Sounds[1]);
-            }
-        }
-        else
-        {
-            Player.transform.position = new Vector3(Player.transform.position.x, 2.5f, Player.transform.position.z);
-            
-            speed = 5f;
-            Stamina += (0.25f * SprintCost) * Time.deltaTime;
-            //UIManager.SprintMeter.fillAmount = Stamina / MaxStamina;
-            SprintCoolDownTimer -= Time.deltaTime;
-
-            //if (!Footsteps.isPlaying)
-            {
-                //Footsteps.PlayOneShot(Sounds[2]);
-            }
+            Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
         }
 
         if (direction.magnitude >= 0.1f)
@@ -114,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
             Vector3 moveDirection = (forward * direction.z + right * direction.x).normalized;
 
             // Set the velocity directly to move the player with no gradual deceleration
-            RB.linearVelocity = new Vector3(moveDirection.x * speed, RB.linearVelocity.y, moveDirection.z * speed);
+            RB.linearVelocity = new Vector3(moveDirection.x * HorizontalSpeed, RB.linearVelocity.y, moveDirection.z * HorizontalSpeed);
         }
         else
         {
@@ -123,11 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (!Input.GetKey(KeyCode.LeftControl))
             {
-                Player.transform.position = new Vector3(Player.transform.position.x, 2.5f, Player.transform.position.z);
-
-                Stamina += SprintCost * Time.deltaTime;
-                //UIManager.SprintMeter.fillAmount = Stamina / MaxStamina;
-                SprintCoolDownTimer -= Time.deltaTime;
+                Player.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
             }
         }
     }
