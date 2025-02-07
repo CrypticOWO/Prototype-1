@@ -2,28 +2,50 @@ using UnityEngine;
 
 public class BreathAttack : MonoBehaviour
 {
-    public GameObject Player;
-    public ParticleSystem FireBreathPreFab;
+    public Transform playerCamera;
+    public float rotationSpeed = 5f;
+    public ParticleSystem fireEffect;
+    public float distanceFromCamera = 2f;
+    public float heightOffset = -2f;
 
-    void Update()
+    private void Update()
     {
-        //follow player movement
-        transform.position = Player.transform.position + new Vector3(0,-1,3);
+        RotateWithMouse();
+        HandleFireEffect();
+    }
 
-        //rotate to mouse movement
-        Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        float angle = Mathf.Atan2(mouse.y - transform.position.y, mouse.x - transform.position.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0,0,angle);
+    void RotateWithMouse()
+    {
+        float horizontal = Input.GetAxis("Mouse X");
+        float vertical = Input.GetAxis("Mouse Y");
 
-        if (Input.GetKey(KeyCode.P))
+        // Calculate the desired rotation of the firebreath
+        Quaternion horizontalRotation = Quaternion.Euler(0, horizontal * rotationSpeed, 0);
+        Quaternion verticalRotation = Quaternion.Euler(-vertical * rotationSpeed, 0, 0);
+
+        // Apply the calculated rotations to the firebreath (relative to the camera's position)
+        transform.rotation = playerCamera.rotation * horizontalRotation * verticalRotation;
+
+        Vector3 newPosition = playerCamera.position + playerCamera.forward * distanceFromCamera;
+        newPosition.y += heightOffset;
+        transform.position = newPosition;
+    }
+
+    void HandleFireEffect()
+    {
+        if (Input.GetMouseButton(0))
         {
-            FireBreathPreFab.Play();
-            Debug.Log("Fire");
+            if (!fireEffect.isPlaying)
+            {
+                fireEffect.Play();
+            }
         }
-        else if (!Input.GetKey(KeyCode.P))
+        else
         {
-            //FireBreathPreFab.Stop();
-            Debug.Log("Off");
+            if (fireEffect.isPlaying)
+            {
+                fireEffect.Stop();
+            }
         }
     }
 }
