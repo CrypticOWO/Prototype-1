@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 14980679}
   - component: {fileID: 14980678}
   - component: {fileID: 14980677}
+  - component: {fileID: 14980680}
   m_Layer: 0
   m_Name: House (9)
   m_TagString: Building
@@ -349,6 +350,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14980675}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &14980680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14980675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6bec0f14665c2438812324257cd0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &61463934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,6 +1445,7 @@ GameObject:
   - component: {fileID: 258700514}
   - component: {fileID: 258700513}
   - component: {fileID: 258700512}
+  - component: {fileID: 258700515}
   m_Layer: 0
   m_Name: House (10)
   m_TagString: Building
@@ -1527,6 +1542,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258700510}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &258700515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258700510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6bec0f14665c2438812324257cd0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &279685020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3049,6 +3077,7 @@ GameObject:
   - component: {fileID: 548969338}
   - component: {fileID: 548969337}
   - component: {fileID: 548969336}
+  - component: {fileID: 548969339}
   m_Layer: 0
   m_Name: House (10)
   m_TagString: Building
@@ -3145,6 +3174,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548969334}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &548969339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548969334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6bec0f14665c2438812324257cd0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &587601080
 GameObject:
   m_ObjectHideFlags: 0
@@ -3157,6 +3199,7 @@ GameObject:
   - component: {fileID: 587601083}
   - component: {fileID: 587601082}
   - component: {fileID: 587601081}
+  - component: {fileID: 587601085}
   m_Layer: 0
   m_Name: House (9)
   m_TagString: Building
@@ -3253,6 +3296,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 89710601}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &587601085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587601080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6bec0f14665c2438812324257cd0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &591908455
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,6 +3321,7 @@ GameObject:
   - component: {fileID: 591908458}
   - component: {fileID: 591908457}
   - component: {fileID: 591908456}
+  - component: {fileID: 591908460}
   m_Layer: 0
   m_Name: House (10)
   m_TagString: Building
@@ -3361,6 +3418,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 89710601}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &591908460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591908455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6bec0f14665c2438812324257cd0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &620728085
 GameObject:
   m_ObjectHideFlags: 0
@@ -4486,6 +4556,7 @@ GameObject:
   - component: {fileID: 965396540}
   - component: {fileID: 965396539}
   - component: {fileID: 965396538}
+  - component: {fileID: 965396541}
   m_Layer: 0
   m_Name: House (9)
   m_TagString: Building
@@ -4582,6 +4653,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965396536}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &965396541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965396536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6bec0f14665c2438812324257cd0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &977744988
 GameObject:
   m_ObjectHideFlags: 0
@@ -4716,6 +4800,7 @@ GameObject:
   - component: {fileID: 977816381}
   - component: {fileID: 977816380}
   - component: {fileID: 977816379}
+  - component: {fileID: 977816382}
   m_Layer: 0
   m_Name: House (9)
   m_TagString: Building
@@ -4812,6 +4897,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977816377}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &977816382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977816377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6bec0f14665c2438812324257cd0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &1071265781
 GameObject:
   m_ObjectHideFlags: 0
@@ -4912,6 +5010,7 @@ GameObject:
   - component: {fileID: 1122241124}
   - component: {fileID: 1122241123}
   - component: {fileID: 1122241122}
+  - component: {fileID: 1122241125}
   m_Layer: 0
   m_Name: House (9)
   m_TagString: Building
@@ -5008,6 +5107,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122241120}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1122241125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122241120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6bec0f14665c2438812324257cd0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &1129283457
 GameObject:
   m_ObjectHideFlags: 0
@@ -5630,6 +5742,7 @@ GameObject:
   - component: {fileID: 1382746670}
   - component: {fileID: 1382746669}
   - component: {fileID: 1382746668}
+  - component: {fileID: 1382746671}
   m_Layer: 0
   m_Name: House (10)
   m_TagString: Building
@@ -5726,6 +5839,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382746666}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1382746671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382746666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6bec0f14665c2438812324257cd0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &1388243024
 GameObject:
   m_ObjectHideFlags: 0
@@ -6296,7 +6422,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527442184}
   serializedVersion: 8
-  lengthInSec: 0.5
+  lengthInSec: 100000
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -6361,7 +6487,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -10051,7 +10177,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -11586,6 +11712,7 @@ GameObject:
   - component: {fileID: 1703616150}
   - component: {fileID: 1703616149}
   - component: {fileID: 1703616148}
+  - component: {fileID: 1703616151}
   m_Layer: 0
   m_Name: House (10)
   m_TagString: Building
@@ -11682,6 +11809,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703616146}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1703616151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703616146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6bec0f14665c2438812324257cd0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &1764347627
 GameObject:
   m_ObjectHideFlags: 0

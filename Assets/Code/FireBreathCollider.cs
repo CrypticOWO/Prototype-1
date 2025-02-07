@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FireBreathCollider : MonoBehaviour
+public class FireBreathCollidera : MonoBehaviour
 {
     public ParticleSystem fireEffect;
 
@@ -9,7 +9,6 @@ public class FireBreathCollider : MonoBehaviour
         var collisionModule = fireEffect.collision;
         collisionModule.enabled = true;
         collisionModule.type = ParticleSystemCollisionType.World;
-        collisionModule.collidesWith = LayerMask.GetMask("Building");
     }
 
     void OnParticleCollision(GameObject other)
@@ -22,7 +21,7 @@ public class FireBreathCollider : MonoBehaviour
             BuildingDamage building = other.GetComponent<BuildingDamage>();
             if (building != null)
             {
-                building.ApplyDamage(10);
+                building.ApplyDamage(2f);
             }
         }
     }
